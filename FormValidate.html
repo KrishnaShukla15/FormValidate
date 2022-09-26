@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  let x = document.getElementById("fname").value;
+  if (x == " ") {
+    alert("Name must be filled out");
+  let y = document.getElementById("mail").value;
+  if ('@' not in y) {
+    alert("incorrect mail entered!");
+  let z = document.getElementById("pass").value;
+  if (z.length < 8) {
+    alert("Password must contain atleast 8 characters!");
+  let a = document.getElementById("phone").value;
+  if (a.length!=10) {
+    alert("Enter correct Phone Number!");
+  }
+</script>
+</head>
+<body>
+
+<h2>Form Validation</h2>
+
+<form>
+  Name:<input type="text" name="fname" id="fname"><br>
+  E-mail: <input type="email" name="mail" id="mail"><br>
+  Password: <input type="password" name="pass" id="pass"><br>
+  Phone no: <input type="number" name="phone" id="phone"><br>
+  <button onclick="validateForm()">Submit</button>
+</form>
+
+</body>
+</html>
